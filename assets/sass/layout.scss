@@ -1,0 +1,201 @@
+@import "_imports";
+
+/*	LAYOUT
+	======== */
+
+@media screen {
+	.u-lFooter {
+		clear: both;
+	}
+	body {
+		position: relative;
+	}
+	.u-lHeader {
+		padding: 4% 4% 0;
+ 	}
+	.u-lFooter {
+		padding: 4rem $layoutContainerPadding--medium;
+	}
+	.galleria--content {
+		margin: 0 0 2.5%;
+	}
+	.u-lMain {
+		padding: 4%; 
+	}
+	.u-lAside {
+		padding-top: 1.25em;
+	}
+}
+
+/*	SMALL
+	----- */
+
+@media all and (min-width: $small) {
+	.u-lFooter {
+		margin-left: 25%;
+		padding: 0 2.5em 2.5em;
+	}
+	.u-lHeader {
+		padding: 2.5em 2.5em 0;
+		margin-left: 25%
+	}
+	.u-lMain {
+		width: 75%;
+		float: right;
+		padding: 2.5em; 
+	}
+	.u-NavSite {
+		float: left;
+		padding: 3em 2.5em;
+		width: 25%;
+	}
+	.u-Masthead__vassar {
+		left: 0;
+		position: absolute;
+		top: 6.5em;
+		width: 25%;
+	}
+	.u-lContent,
+	.u-lAside {
+		padding: 0;
+	}
+	.u-lAside {
+		padding-top: 1.25em;
+	}
+	.u-Search {
+		width: 14.5rem;
+		right: 4%;
+		top: 2.45em;
+	}
+	.u-Masthead__siteName {
+		display: inline-block;
+	}
+
+}
+
+/*	MEDIUM
+	------ */
+
+@media all and (min-width: $medium) {
+	.u-lMain {
+		width: 80%;
+	}
+	.u-NavSite {
+		width: 20%;
+	}
+	.u-NavSite:before {
+		right: 80%;
+	}
+	.u-biosInner .u-lMain {
+		width: 75%;
+	}
+	.u-biosInner .u-NavSite {
+		width: 25%;
+	}
+	.u-biosInner .u-lFooter,
+ 	.u-biosInner .u-lHeader	{
+		margin-left: 25%;
+	}
+ 	.u-biosInner .u-NavSite:before {
+		right: 75%;
+	}
+	.u-Masthead__vassar {
+		width: 20%;
+	}
+	.u-lFooter {
+	 	margin-left: 20%;
+	}
+	.u-lHeader {
+	 	margin-left: 20%
+	}
+
+}
+
+/*	LARGE
+	----- */
+
+@media all and (min-width: $large) {
+	body {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.u-Masthead__vassar {
+		top: 3.25em;
+	}
+	.u-lAside {
+		padding: 0 0 0 1.5em;
+		width: 30%;
+		float: right;
+	}
+	.u-lContent {
+		padding: 0;
+		padding-right: 2%;
+		width: 70%;
+		float: left;
+	}
+
+	.u-Search {
+		top: 3.45em;
+	}
+}
+
+@media all and (min-width: $pointAtWhichSearchMovesToRight) {
+	.u-Masthead__siteName {
+		margin-top: 0;
+	}
+	.u-Search {
+		left: auto;
+	}
+}
+
+/* Modules */
+
+@media screen {
+
+	.u-Masthead__siteName { /* masthead  */
+		margin-top: 4rem;
+	}
+	.u-lAside .u-Figure--full { /* images */
+		margin-bottom: 1.5em;
+	}
+	.u-Gallery__link {
+		display: inline;
+		float: none;
+	}
+}
+
+@media all and (min-width: $small) {
+
+	.u-BioList__name {
+		display: inline-block;
+	}
+
+}
+
+@media (min-width: 65em) {
+
+	.u-Masthead__siteName {
+		margin-top: 0;
+	}
+
+}
+
+@media screen and (min-width: 600px) {
+	.u-Masthead [class*=icon-] img, .u-Masthead [class*=icon-] svg {
+		display: none;
+	}
+}
+
+.myDIV {
+	display: none;
+}
+.u-NavSite__level--2 .u-NavSite__item {
+	padding: .3em 0;
+}
+.u-Bio__contactItem {
+	 margin-bottom: 0;
+}
+#navigation:target .u-NavSite__level--1 {
+	z-index: 10000;
+	position: relative;
+}

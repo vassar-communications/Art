@@ -1,0 +1,183 @@
+@import "_imports";
+
+/*	TYPOGRAPHY
+	========== */
+
+/* Elements */
+
+html {
+	font-family: $sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+	margin-bottom: .8em;
+	margin-top: 0;
+	font-weight: $fontWeightBold;
+}
+h1 {
+	font-size: 2.44em;
+}
+h2 {
+	font-size: 1.6em;
+	margin-top: 0;
+}
+h3 {
+	font-size: 1.3em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.12em;
+}
+h6 {
+	font-size: 1em;
+}
+
+.u-lContent {
+	@include v-pixel-fallback ('font-size', 1.195rem);
+	font-family: $sans-serif;
+	font-weight: $fontWeightNormal;
+	line-height: 1.4;
+	margin-bottom: 1.25em;
+}
+
+ul,
+ol {
+	margin: .64em 0;
+}
+
+th {
+	font-weight: $fontWeightBold;
+}
+
+td {
+	font-weight: $fontWeightNormal;
+}
+
+li {
+	margin: 0 0 0.327em;
+}
+
+/* Main page content */
+
+.u-lMain {
+	font-size: 100%;
+}
+
+.u-pageTitle {
+	margin-top: 0;
+}
+
+/* u-lAside sidebar styles */
+
+.u-lAside {
+
+	h1 {
+		font-size: 1.953em;
+	}
+
+	h2 {
+		font-size: 1.562em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: 1.143em;
+	}
+
+	h5 {
+		font-size: 1.093em;
+	}
+
+	p,
+	ol,
+	ul {
+		font-size: 1.195em;
+		font-weight: $fontWeightNormal;
+	}
+
+	ul,
+	ol {
+		margin-bottom: 0.64em;
+	}
+
+	li {
+		margin-bottom: 0.327em;
+		line-height: 1.2;
+	}
+
+}
+
+/* Ask Ray what he thinks of this */
+
+@media all and (min-width: $tiny) {
+	.u-lMain {
+		font-size: 110%;
+	}
+	.u-lAside {
+		p,
+		ol,
+		ul {
+			font-size: 0.956em;
+		}
+	}
+
+}
+
+/* Modules */
+
+.u-Masthead__vassar {
+	font-style: italic;
+	font-weight: $fontWeightBold;
+}
+@media all and (min-width: $small) {
+	.u-Masthead__vassar {
+		padding-left: 2.5em;
+	}
+}
+.u-Masthead__siteName {
+	padding-bottom: .6em;
+	margin-bottom: 0;
+}
+.u-NavSite__level--1 .u-NavSite__item {
+	text-transform: uppercase;
+}
+.u-NavSite__level--2 .u-NavSite__item,
+.u-NavSite__level--3 .u-NavSite__item {
+	text-transform: none;
+}
+.Module__header {
+	text-transform: uppercase;
+}
+
+@media all and (min-width: $small) {
+
+	.u-Masthead__siteName {
+		font-size: 3.25em; 
+		margin-top: 0;
+		padding-bottom: .911em;
+	}
+	.u-VCard--site {
+		text-align: left;
+	}
+	.u-Masthead__vassar {
+		@include v-pixel-fallback("font-size", 1.25rem);
+		padding-left: 2em;
+	}
+
+}
+
+@media all and (min-width: $medium) {
+
+	p {
+		margin: 0 0 1em;
+	}
+	.icon-envelope:before {
+		 content: "" !important;
+	}
+
+}

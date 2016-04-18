@@ -1,0 +1,122 @@
+@import "_imports";
+
+/*	COLOR
+	===== */
+
+a {
+	/*link-colors($normal, $hover, $active, $visited, $focus)*/
+	@include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive, $linkColorVisited, $linkColorHoverFocus);
+	text-decoration: none;
+	border-bottom: 1px solid $linkBorderColor;
+	padding-bottom: 0;
+}
+html {
+	background: #fff url(../../assets/images/css/calder-bg-00.jpg) no-repeat top center fixed;
+	background-size: cover;
+}
+.u-Container {
+}
+.u-lHeader,
+.u-lMain,
+.u-lFooter {
+}
+body {
+	color: $chocolate;
+}
+tbody { 
+	tr:nth-child(odd) {
+		background-color: $lightBeige;
+	}
+	td,
+	th {
+	border: 1px solid $lightBeige;
+	}
+}
+.u-Masthead__siteName {
+	border-bottom: 4px solid #e7ddce;
+}
+.u-Masthead__siteName--link,
+.u-BioList__name {
+	@include link-colors($chocolate, $beige, $orange, $chocolate, $beige);
+}
+.u-Masthead__vassar--link {
+  @include link-colors(white, $lightBeige, $orange, white, $lightBeige);
+}
+.u-VCard--site { 
+	padding-top: 3em;
+	border-top: 1px solid $lightBeige;
+}
+.u-lContent h3,
+.u-lContent h4,
+.u-lContent h5,
+.u-lContent h6 {
+	color: $beige;
+}
+@media all and (min-width: $small) {
+	html {
+	}
+	/* Search */
+	.u-Search {
+		border-bottom: 1px solid $chocolate;
+	}
+	.u-Masthead__vassar--link {
+		@include link-colors($chocolate, $beige, $orange, $chocolate, $beige);
+	}
+}
+.u-lAside {
+	border-top: 1px solid $lightBeige;
+}
+@media all and (min-width: $large) {
+	.u-lAside {
+		border-left: 1px solid $lightBeige;
+		border-top: none;
+	}
+}
+
+.u-Search__submit svg {
+	fill: $chocolate; }
+.u-Search__submit svg:visited {
+	fill: $chocolate; }
+.u-Search__submit svg:focus {
+	fill: $beige; }
+.u-Search__submit svg:hover {
+	fill: $beige; }
+.u-Search__submit svg:active {
+	fill: $orange }
+
+.u-NavSite__item,
+.Module--news .Module__link {
+	@include link-colors($chocolate, $beige, $orange, $chocolate, $beige);
+}
+.ac-NavAnchor--menu,
+.u-Search__button {
+  /*link-colors($normal, $hover, $active, $visited, $focus)*/
+  @include link-colors(white, $lightBeige, $orange, white, $lightBeige);
+}
+.u-NavSite__item.u-NavSite__item--isCurrent {
+	@include link-colors($beige, $beige, $beige, $beige, $beige);
+}
+.u-NavSite__item--isOpen .u-NavSite__item {
+	@include link-colors($beige, $chocolate, $orange, $beige, $chocolate);
+}
+.u-NavSite__item--isOpen .u-NavSite__item.u-NavSite__item--isCurrent {
+	@include link-colors($chocolate, $beige, $orange, $chocolate, $beige);
+}
+
+/* google search results */
+a.gs-title {
+  color: #5a749f !important; }
+  a.gs-title:visited {
+    color: #5a749f !important; }
+  a.gs-title:focus {
+    color: #f7931d !important; }
+  a.gs-title:hover {
+    color: #f7931d !important; }
+  a.gs-title:active {
+    color: #d6cfc3 !important; }
+.u-BreadCrumbs {
+ border-bottom: 1px solid $lightBeige;
+}
+.Module--sidebar .Module__listItem {
+	border-top: 1px solid $lightBeige;
+}
